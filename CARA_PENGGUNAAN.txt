@@ -1,0 +1,75 @@
+===================================================================
+  CARA PENGGUNAAN PROYEK ANALISIS WISATAWAN SULAWESI TENGAH
+===================================================================
+Judul  : Prediksi Jumlah Perjalanan Wisatawan Nusantara Berdasarkan
+         Kabupaten/Kota di Provinsi Sulawesi Tengah
+         Menggunakan Metode Regresi Linear
+===================================================================
+
+PRASYARAT
+---------
+- Python 3.8 atau lebih baru
+- pip (package installer for Python)
+- Koneksi internet (untuk instalasi library)
+
+LANGKAH 1: PERSIAPAN LINGKUNGAN
+---------------------------------
+Buka terminal / command prompt, lalu jalankan:
+
+    pip install -r requirements.txt
+
+Atau install satu per satu:
+
+    pip install pandas numpy matplotlib seaborn scikit-learn scipy statsmodels jupyter
+
+LANGKAH 2: SIAPKAN DATA
+--------------------------
+Pastikan file dataset berada di folder yang sama dengan notebook:
+
+    Gabungan_Data_Wisatawan_Sulteng_2024_2026.xlsx
+
+LANGKAH 3: JALANKAN JUPYTER NOTEBOOK
+---------------------------------------
+Jalankan perintah berikut di terminal dari folder proyek:
+
+    jupyter notebook
+
+Lalu buka file:  analysis.ipynb
+
+LANGKAH 4: EKSEKUSI NOTEBOOK
+-------------------------------
+Pilih menu:  Kernel > Restart & Run All
+
+Atau jalankan setiap cell secara berurutan dengan menekan:
+    Shift + Enter
+
+LANGKAH 5: HASIL OUTPUT
+--------------------------
+Setelah semua cell berjalan, output yang dihasilkan:
+
+  - Semua grafik tersimpan otomatis di folder /grafik/
+    - 01_total_wisatawan_provinsi.png
+    - 02_perbandingan_kabkota_2024_2025.png
+    - 03_tren_bulanan_provinsi.png
+    - 04_heatmap_korelasi.png
+    - 05_distribusi_tahunan_kabkota.png
+    - 06_aktual_vs_prediksi.png
+    - 07_prediksi_2026_vs_aktual.png
+    - 08_analisis_residual.png
+  - Tabel prediksi 2026: prediksi_2026.csv
+  - Evaluasi model ditampilkan di cell terakhir
+
+CATATAN
+-------
+- Data dimuat mulai dari baris ke-5 file Excel (header baris ke-4)
+- Nilai '-' pada data 2026 (bulan Mei–Des) otomatis ditangani sebagai NaN
+- Model menggunakan data Jan–Apr sebagai fitur untuk prediksi total tahunan
+- Train-test split: 80% latih, 20% uji (random_state=42)
+
+TROUBLESHOOTING
+---------------
+Jika ada error "ModuleNotFoundError": jalankan ulang `pip install -r requirements.txt`
+Jika grafik tidak muncul: pastikan folder /grafik/ ada di direktori yang sama
+Jika data tidak terbaca: pastikan nama file Excel tidak berubah
+
+===================================================================
