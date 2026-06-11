@@ -1,4 +1,4 @@
-# Analisi  Prediksi Jumlah Perjalanan Wisatawan Nusantara
+# Analisi Dan Prediksi Jumlah Perjalanan Wisatawan Nusantara
 ## Berdasarkan Kabupaten/Kota di Provinsi Sulawesi Tengah  
 ### Menggunakan Metode Regresi Linear
 ---
